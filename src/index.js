@@ -1,18 +1,19 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import autobind from 'autobind-decorator'
-import getURL from './getURL'
 import getQueryParameter from './getQueryParameter'
+import getURL from './getURL'
 import reset from './reset'
 /* global localStorage */
 
 export default class LinkedIn extends React.Component {
 
   static propTypes = {
-    clientId: React.PropTypes.string,
-    callback: React.PropTypes.func.isRequired,
-    className: React.PropTypes.string,
-    text: React.PropTypes.node,
-    scope: React.PropTypes.arrayOf(React.PropTypes.string)
+    clientId: PropTypes.string,
+    callback: PropTypes.func.isRequired,
+    className: PropTypes.string,
+    text: PropTypes.node,
+    scope: PropTypes.arrayOf(PropTypes.string)
   }
 
   componentDidMount () {
